@@ -12,21 +12,11 @@ Hay casos en donde la tabla no tiene una entidad definida sino sirve únicamente
 <p align="justify">
 Aunque pueden crearse contadores y series de forma manual esto no será tan eficiente como los objetos <em>sequence</em> que nos proporciona PostgreSQL ya que mejoran el desempeño de la base de datos sobretodo en sistemas multiusuario. La forma automática de crear una secuencia es utilizar el tipo de dato serial en una columna, como se muestra a continuación con el siguiente script para una tabla llamada  <em>Publishers</em>.
 </p>
-<!--Code-->
-<div>
-<IMG  border="0" src="picture_library/pgs/tbPublishers.png">
-</div><br/>
-<!--Code-->
 <p align="justify">Al ejecutar este script se crean dos objetos: la secuencia <em>(sequence)</em> y la <em>tabla</em>  (en ese orden), como lo muestra la pestaña messages de <em>pgadmin</em> al finalizar la ejecución del script.</p>
 <div>
 <IMG border="0" src="picture_library/pgs/pgs1.png">
 </div><br/>
 <p align="justify">Ahora creamos una función plpgsql con la que agregaremos los registros a la tabla, en esta función establecemos los valores mediante parámetros para cada una de las columnas, excepto claro el identificador <em>(columna publisherid)</em>, ya que  de ese valor se encargará la secuencia.</p>
-<!--Code -->
-<div>
-<IMG  border="0" src="picture_library/pgs/uspCreatePublisher.png">
-</div><br/>
-<!--Code-->
 <p align="justify">
 Ahora con el siguiente programa en C# probaremos la secuencia agregando algunos registros e imprimiendo sus identificadores en la consola.</p>
 <p align="justify">
