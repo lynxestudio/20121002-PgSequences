@@ -18,11 +18,7 @@ Aunque pueden crearse contadores y series de forma manual esto no será tan efic
 </div><br/>
 <p align="justify">Ahora creamos una función plpgsql con la que agregaremos los registros a la tabla, en esta función establecemos los valores mediante parámetros para cada una de las columnas, excepto claro el identificador <em>(columna publisherid)</em>, ya que  de ese valor se encargará la secuencia.</p>
 <p align="justify">
-Ahora con el siguiente programa en C# probaremos la secuencia agregando algunos registros e imprimiendo sus identificadores en la consola.</p>
-<p align="justify">
-<div>
-<IMG  border="0" src="picture_library/pgs/TestSequence.png">
-</div><br/>
+Ahora con el siguiente programa en C# probaremos la secuencia agregando algunos registros e imprimiendo sus identificadores en la consola.
 </p>
 <p>Compilamos el programa con el siguiente comando.<br></p>
 <tt><b>$ gmcs -r:/home/martin/lib/Npgsql2.0.11.94/Mono2.0/bin/Npgsql.dll,System.Data Main.cs </tt></b>
