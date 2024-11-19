@@ -14,20 +14,15 @@ Aunque pueden crearse contadores y series de forma manual esto no será tan efic
 </p>
 <p align="justify">Al ejecutar este script se crean dos objetos: la secuencia <em>(sequence)</em> y la <em>tabla</em>  (en ese orden), como lo muestra la pestaña messages de <em>pgadmin</em> al finalizar la ejecución del script.</p>
 <div>
-<IMG border="0" src="picture_library/pgs/pgs1.png">
+<IMG border="0" src="images/pgs1.png">
 </div><br/>
 <p align="justify">Ahora creamos una función plpgsql con la que agregaremos los registros a la tabla, en esta función establecemos los valores mediante parámetros para cada una de las columnas, excepto claro el identificador <em>(columna publisherid)</em>, ya que  de ese valor se encargará la secuencia.</p>
 <p align="justify">
 Ahora con el siguiente programa en C# probaremos la secuencia agregando algunos registros e imprimiendo sus identificadores en la consola.
 </p>
-<p>Compilamos el programa con el siguiente comando.<br></p>
-<tt><b>$ gmcs -r:/home/martin/lib/Npgsql2.0.11.94/Mono2.0/bin/Npgsql.dll,System.Data Main.cs </tt></b>
-<div>
-<IMG  border="0" src="picture_library/pgs/pgs2.png">
-</div><br/>
 <p>Al ejecutar el programa, se mostrarán los registros agregados y los valores que les asigno la secuencia como identificador.</p>
 <div>
-<IMG border="0" src="picture_library/pgs/pgs3.png">
+<IMG border="0" src="images/pgs3.png">
 </div><br/>
 <p>También podemos crear una secuencia (sequence) de forma manual siguiendo la sintaxis:</p>
 <pre>
@@ -41,20 +36,20 @@ Por ejemplo creamos una secuencia que se incremente de 6 en 6
 </pre>
 <p>Para acceder a los valores de la secuencia lo hacemos con un <strong>SELECT</strong> y la función <em>nextval()</em> como se muestra a continuación:</p>
 <div>
-<IMG border="0" src="picture_library/pgs/pgs4.png">
+<IMG border="0" src="images/pgs4.png">
 </div><br/>
 <p>Observamos que la secuencia comienza en 1 e incrementa de 6 en 6.<br>
 Para acceder al valor actual de la secuencia lo hacemos con la función <em>currval()</em> como se muestra a continuación:</p>
 <div>
-<IMG border="0" src="picture_library/pgs/pgs5.png">
+<IMG border="0" src="images/pgs5.png">
 </div><br/>
 <p>Para establecer un nuevo valor en la secuencia utilizamos la función <em>setval()</em> </p>
 <div>
-<IMG border="0" src="picture_library/pgs/pgs6.png">
+<IMG border="0" src="images/pgs6.png">
 </div><br/>
 <p>Por último podemos eliminar la secuencia creada con el comando:</p>
 <pre><b>DROP SEQUENCE [name]</b></pre>
 <p>Como se muestra a continuación, en la siguiente imagen:</p>
 <div>
-<IMG border="0" src="picture_library/pgs/pgs7.png">
+<IMG border="0" src="images/pgs7.png">
 </div>
