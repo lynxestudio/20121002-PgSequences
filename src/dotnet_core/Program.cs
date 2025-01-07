@@ -16,7 +16,6 @@ try
             {
             using (NpgsqlCommand cmd = new NpgsqlCommand(commandText,conn)) 
             {
-               //cmd.CommandType = CommandType.StoredProcedure;
                NpgsqlParameter[] parameters = 
                {
                   new NpgsqlParameter ("p_id", NpgsqlDbType.Integer, 4, "publisherid "),
